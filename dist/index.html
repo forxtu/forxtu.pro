@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>forxtu</title>
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+</head>
+<body>
+
+<div class="loader_wrap" data-text="">
+    <span class="Loader__Circle"></span>
+    <span class="Loader__Circle"></span>
+    <span class="Loader__Circle"></span>
+    <span class="Loader__Circle"></span>
+</div>
+
+<div class="site-wrap">
+    <div class="panel-wrap animate--tilt2">
+        <div class="panel" data-x-pos="0" data-y-pos="0">
+            <span class="panel__nav panel__nav--up js-up glitch-btn">
+                <div class="label">newsblog</div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+            </span>
+            <span class="panel__nav panel__nav--left js-left glitch-btn">
+                <div class="label">about</div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+            </span>
+            <span class="panel__nav panel__nav--right js-right glitch-btn">
+                <div class="label">skills</div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+            </span>
+            <span class="panel__nav panel__nav--down js-down glitch-btn">
+                <div class="label">projects</div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+            </span>
+            <span class="panel__zoom js-zoom">View All</span>
+
+            <canvas id="home_animation_main" style="position:absolute; top:0; left:0;"></canvas>
+            <div id="buffer" style="display:none;">
+
+        </div>
+        <div class="panel" data-x-pos="0" data-y-pos="1">
+            <span class="panel__nav panel__nav--right-down js-down js-right glitch-btn">
+                <div class="label">skills</div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+            </span>
+            <span class="panel__nav panel__nav--left-down js-down js-left glitch-btn">
+                <div class="label">about</div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+            </span>
+            <span class="panel__nav panel__nav--down js-down glitch-btn">
+                <div class="label">home</div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+            </span>
+            <h1>Up</h1>
+        </div>
+        <div class="panel" data-x-pos="-1" data-y-pos="0">
+            <span class="panel__nav panel__nav--right-top js-up js-right glitch-btn">
+                <div class="label">newsblog</div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+            </span>
+            <span class="panel__nav panel__nav--right js-right glitch-btn">
+                <div class="label">home</div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+            </span>
+            <span class="panel__nav panel__nav--right-down js-down js-right glitch-btn">
+                <div class="label">projects</div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+            </span>
+            <h1>Left</h1>
+        </div>
+        <div class="panel" data-x-pos="1" data-y-pos="0">
+            <span class="panel__nav panel__nav--left-top js-up js-left glitch-btn">
+                <div class="label">newsblog</div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+                <div class="mask"><span>newsblog</span></div>
+            </span>
+            <span class="panel__nav panel__nav--left js-left glitch-btn">
+                <div class="label">home</div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+            </span>
+            <span class="panel__nav panel__nav--left-down js-down js-left glitch-btn">
+                <div class="label">projects</div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+                <div class="mask"><span>projects</span></div>
+            </span>
+            <h1>Right</h1>
+        </div>
+        <div class="panel" data-x-pos="0" data-y-pos="-1">
+            <span class="panel__nav panel__nav--up js-up glitch-btn">
+                <div class="label">home</div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+                <div class="mask"><span>home</span></div>
+            </span>
+            <span class="panel__nav panel__nav--left-top js-up js-left glitch-btn">
+                <div class="label">about</div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+                <div class="mask"><span>about</span></div>
+            </span>
+            <span class="panel__nav panel__nav--right-top js-up js-right glitch-btn">
+                <div class="label">skills</div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+                <div class="mask"><span>skills</span></div>
+            </span>
+            <h1>Down</h1>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery -->
+<script src="../src/js/jquery-3.2.1.min.js"></script>
+
+<!-- Main script -->
+<script src="js/app.js"></script>
+
+
+</body>
+</html>

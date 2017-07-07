@@ -1,0 +1,218 @@
+.site-wrap {
+    transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    &.show-all {
+        transform: rotateY(-15deg) scale(0.2);
+    }
+}
+
+
+.panel-wrap {
+    @include height-width();
+    perspective: 2000px;
+    transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    &.animate--tilt2 {
+        transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1) 0.3s;
+    }
+}
+
+.panel {
+    @include height-width();
+    position: absolute;
+    transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    will-change: transform;
+    &:before {
+        background-color: transparent;
+        bottom: 0;
+        content: "";
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: background-color 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+        z-index: 2;
+    }
+}
+
+.show-all {
+    .panel:before {
+        pointer-events: all;
+    }
+    .panel:hover:before {
+        background-color: rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+    }
+    .panel__zoom {
+        pointer-events: none;
+    }
+}
+
+
+.animate--tilt2.animate .panel {
+    transform: scale(0.8) rotateX(25deg);
+}
+
+.panel h1 {
+    cursor: default;
+    left: 50%;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    user-select: none;
+}
+
+.panel[data-x-pos="-2"] {
+    left: -200%;
+}
+
+.panel[data-x-pos="-1"] {
+    left: -100%;
+}
+
+.panel[data-x-pos="1"] {
+    left: 100%;
+}
+
+.panel[data-x-pos="2"] {
+    left: 200%;
+}
+
+.panel[data-y-pos="-2"] {
+    top: 200%;
+}
+
+.panel[data-y-pos="-1"] {
+    top: 100%;
+}
+
+.panel[data-y-pos="1"] {
+    top: -100%;
+}
+
+.panel[data-y-pos="2"] {
+    top: -200%;
+}
+
+.panel__zoom {
+    cursor: pointer;
+    left: 50%;
+    opacity: .2;
+    position: absolute;
+    top: 30%;
+    transform: translateX(-50%) translateY(-50%) translateY(-12vmin);
+    transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    user-select: none;
+    z-index: 10;
+    overflow: hidden;
+    padding: 0 3px;
+    &:hover {
+        opacity: 1;
+    }
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        content: "";
+        transform: translate3d(-101%,0,0);
+        transition: transform 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+    }
+    &:hover:after {
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+.panel__nav {
+    cursor: pointer;
+    opacity: .2;
+    position: absolute;
+    transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    user-select: none;
+    will-change: opacity;
+    z-index: 1;
+    &--up {
+        left: 50%;
+        top: 2rem;
+        transform: translateX(-50%);
+    }
+    &--left {
+        left: 1rem;
+        top: 47%;
+        transform: translateY(-50%) rotate(-90deg) translateX(-100%) !important;
+        transform-origin: top left;
+    }
+    &--left-top {
+        left: 5rem;
+        top: 2rem;
+    }
+    &--left-down {
+        bottom: 0rem;
+        left: 4.8rem;
+    }
+    &--right {
+        right: 1rem;
+        top: 47%;
+        transform: translateY(-50%) rotate(90deg) translateX(100%) !important;
+        transform-origin: top right;
+    }
+    &--right-top {
+        right: 0rem;
+        top: 2rem;
+    }
+    &--right-down {
+        bottom: 0rem;
+        right: 0rem;
+    }
+    &--down {
+        bottom: 0rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.panel__animation-list {
+    font-size: 3.3vmin;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) translateY(14vmin);
+    span {
+        cursor: pointer;
+        display: inline-block;
+        opacity: .2;
+        position: relative;
+        transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+        user-select: none;
+        &:after {
+            border-bottom: .3vmin solid transparent;
+            bottom: 0;
+            content: "";
+            left: -1px;
+            position: absolute;
+            right: 0;
+            transition: border-color 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+            width: 100%;
+        }
+        &.active {
+            opacity: 1;
+            &:after {
+                border-color: white;
+            }
+        }
+        &:hover {
+            opacity: 1;
+            &:after {
+                border-color: white;
+            }
+        }
+    }
+}

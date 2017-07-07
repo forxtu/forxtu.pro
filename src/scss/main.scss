@@ -1,0 +1,240 @@
+@import "variables", "mixins", "panels", "glitch";
+
+body {
+    background-color: $background-color;
+    /*background-image: url('https://i.imgsafe.org/6c147abfa3.jpg');*/
+    background-repeat: repeat;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: .2rem;
+    margin: 0;
+    overflow: hidden;
+    perspective: 1000px;
+    text-transform: uppercase;
+}
+
+
+h1 {
+    @include text($h1...);
+}
+
+
+.loader_wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  position: absolute;
+  background: #000;
+  z-index: 10;
+}
+
+.Loader__Circle {
+  left: calc(100vw - 55%);
+  top: calc(100vh - 60%);
+  width: 150px;
+  height: 150px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8;
+  mix-blend-mode: screen;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.2" /><feFuncG type="linear" slope="1.2" /><feFuncB type="linear" slope="1.2" /></feComponentTransfer></filter></svg>#filter');
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  -webkit-animation-name: SpinAround;
+          animation-name: SpinAround;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+
+
+.Loader__Circle:nth-of-type(1) {
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      4px 0 0 4px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      4px 0 0 4px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      4px 0 0 3px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      4px 0 0 3px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      3px 0 0 4px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      3px 0 0 4px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      3px 0 0 3px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      3px 0 0 3px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      4px 0 0 4px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      4px 0 0 4px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      4px 0 0 3px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      4px 0 0 3px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      3px 0 0 4px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      3px 0 0 4px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      3px 0 0 3px #2979FF;
+  box-shadow: inset 1px 0 0 1px #2979FF,
+      3px 0 0 3px #2979FF;
+  -webkit-animation-direction: reverse;
+          animation-direction: reverse;
+  -webkit-transform-origin: 49.6% 49.8%;
+          transform-origin: 49.6% 49.8%;
+}
+
+
+
+.Loader__Circle:nth-of-type(2) {
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -4px 0px 0 4px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -4px 0px 0 4px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -4px 0px 0 3px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -4px 0px 0 3px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -3px 0px 0 4px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -3px 0px 0 4px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -3px 0px 0 3px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -3px 0px 0 3px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -4px 0px 0 4px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -4px 0px 0 4px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -4px 0px 0 3px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -4px 0px 0 3px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -3px 0px 0 4px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -3px 0px 0 4px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -3px 0px 0 3px #FF1744;
+  box-shadow: inset 1px 0 0 1px #FF1744,
+      -3px 0px 0 3px #FF1744;
+  -webkit-transform-origin: 49.5% 49.8%;
+          transform-origin: 49.5% 49.8%;
+}
+
+
+
+.Loader__Circle:nth-of-type(3) {
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 4px 0 4px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 4px 0 4px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 4px 0 3px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 4px 0 3px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 3px 0 4px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 3px 0 4px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 3px 0 3px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 3px 0 3px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 4px 0 4px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 4px 0 4px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 4px 0 3px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 4px 0 3px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 3px 0 4px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 3px 0 4px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 3px 0 3px #FFFF8D;
+  box-shadow: inset 1px 0 0 1px #FFFF8D,
+      0 3px 0 3px #FFFF8D;
+  -webkit-transform-origin: 49.8% 49.8%;
+          transform-origin: 49.8% 49.8%;
+}
+
+
+
+.Loader__Circle:nth-of-type(4) {
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -4px 0 4px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -4px 0 4px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -4px 0 3px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -4px 0 3px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -3px 0 4px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -3px 0 4px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -3px 0 3px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -3px 0 3px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -4px 0 4px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -4px 0 4px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -4px 0 3px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -4px 0 3px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -3px 0 4px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -3px 0 4px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -3px 0 3px #B2FF59;
+  box-shadow: inset 1px 0 0 1px #B2FF59,
+      0 -3px 0 3px #B2FF59;
+  -webkit-transform-origin: 49.7% 49.7%;
+          transform-origin: 49.7% 49.7%;
+}
+
+
+
+@-webkit-keyframes SpinAround {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+
+
+@keyframes SpinAround {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}

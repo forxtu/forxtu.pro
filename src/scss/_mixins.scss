@@ -1,0 +1,10 @@
+@mixin height-width(){
+  height: 100vh;
+  width: 100vw;
+}
+
+@mixin text($fontSize, $margin, $color){
+  font-size: $fontSize;
+  margin: $margin;
+  color: $color;
+}
