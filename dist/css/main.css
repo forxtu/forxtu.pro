@@ -944,8 +944,9 @@ h1 {
   z-index: 10; }
 
 .Loader__Circle {
-  left: calc(100vw - 55%);
-  top: calc(100vh - 60%);
+  left: 50%;
+  top: 50%;
+  margin: -86px 0 0 -70px;
   width: 150px;
   height: 150px;
   display: block;
