@@ -943,7 +943,7 @@ h1 {
   background: #000;
   z-index: 10; }
 
-.Loader__Circle {
+.loader_circle {
   left: 50%;
   top: 50%;
   margin: -86px 0 0 -70px;
@@ -968,7 +968,7 @@ h1 {
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear; }
 
-.Loader__Circle:nth-of-type(1) {
+.loader_circle:nth-of-type(1) {
   box-shadow: inset 1px 0 0 1px #2979FF, 4px 0 0 4px #2979FF;
   box-shadow: inset 1px 0 0 1px #2979FF, 4px 0 0 4px #2979FF;
   box-shadow: inset 1px 0 0 1px #2979FF, 4px 0 0 3px #2979FF;
@@ -990,7 +990,7 @@ h1 {
   -webkit-transform-origin: 49.6% 49.8%;
   transform-origin: 49.6% 49.8%; }
 
-.Loader__Circle:nth-of-type(2) {
+.loader_circle:nth-of-type(2) {
   box-shadow: inset 1px 0 0 1px #FF1744, -4px 0px 0 4px #FF1744;
   box-shadow: inset 1px 0 0 1px #FF1744, -4px 0px 0 4px #FF1744;
   box-shadow: inset 1px 0 0 1px #FF1744, -4px 0px 0 3px #FF1744;
@@ -1010,7 +1010,7 @@ h1 {
   -webkit-transform-origin: 49.5% 49.8%;
   transform-origin: 49.5% 49.8%; }
 
-.Loader__Circle:nth-of-type(3) {
+.loader_circle:nth-of-type(3) {
   box-shadow: inset 1px 0 0 1px #FFFF8D, 0 4px 0 4px #FFFF8D;
   box-shadow: inset 1px 0 0 1px #FFFF8D, 0 4px 0 4px #FFFF8D;
   box-shadow: inset 1px 0 0 1px #FFFF8D, 0 4px 0 3px #FFFF8D;
@@ -1030,7 +1030,7 @@ h1 {
   -webkit-transform-origin: 49.8% 49.8%;
   transform-origin: 49.8% 49.8%; }
 
-.Loader__Circle:nth-of-type(4) {
+.loader_circle:nth-of-type(4) {
   box-shadow: inset 1px 0 0 1px #B2FF59, 0 -4px 0 4px #B2FF59;
   box-shadow: inset 1px 0 0 1px #B2FF59, 0 -4px 0 4px #B2FF59;
   box-shadow: inset 1px 0 0 1px #B2FF59, 0 -4px 0 3px #B2FF59;
