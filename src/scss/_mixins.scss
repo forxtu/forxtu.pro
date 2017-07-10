@@ -8,3 +8,23 @@
   margin: $margin;
   color: $color;
 }
+
+/* loader */
+@mixin position_center(){
+  left: 50%;
+  top: 50%;
+  margin: -75px 0 0 -75px;
+  width: 150px;
+  height: 150px;
+  display: block;
+  position: absolute;
+}
+
+@mixin rotate_0(){
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+@mixin rotate_m360(){
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
